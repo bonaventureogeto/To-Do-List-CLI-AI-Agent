@@ -1,7 +1,11 @@
 import os
 import json
 from openai import OpenAI
+from dotenv import load_dotenv
 
+
+# load env sat startup
+load_dotenv()
 
 _llm = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 

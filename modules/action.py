@@ -17,7 +17,7 @@ def _load_tasks():
 
 
 def _save_tasks(tasks: list[str]):
-    os.makedirs(os.path.dirname(TASK_FILE), exit_okay=True)
+    os.makedirs(os.path.dirname(TASK_FILE), exist_ok=True)
     with open(TASK_FILE, 'w') as file:
         file.write("\n".join(tasks))
 
